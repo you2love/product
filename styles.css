@@ -1257,6 +1257,77 @@ button {
     margin-right: 6px;
 }
 
+.attention-items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.attention-item {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    background: #F9FAFB;
+    border-radius: 10px;
+    border: 1px solid #E5E7EB;
+}
+
+.attention-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.attention-icon.warning {
+    background: #FEF3C7;
+    color: #D97706;
+}
+
+.attention-icon.info {
+    background: #DBEAFE;
+    color: #2563EB;
+}
+
+.attention-icon.success {
+    background: #D1FAE5;
+    color: #059669;
+}
+
+.attention-icon i {
+    font-size: 16px;
+}
+
+.attention-content h4 {
+    font-size: 15px;
+    margin-bottom: 6px;
+    color: #1F2937;
+}
+
+.attention-content > p {
+    color: #6B7280;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.attention-note {
+    background: white;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    color: #6B7280;
+    border-left: 3px solid #4F46E5;
+}
+
+.note-label {
+    font-weight: 600;
+    color: #4F46E5;
+    margin-right: 6px;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
     .hero {
