@@ -1153,6 +1153,110 @@ button {
     font-size: 14px;
 }
 
+/* Checklist Section */
+.checklist-section {
+    background: #F9FAFB;
+}
+
+.checklist-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.checklist-category {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.checklist-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.checklist-header i {
+    font-size: 24px;
+    color: #4F46E5;
+}
+
+.checklist-header h3 {
+    font-size: 18px;
+}
+
+.checklist-duration {
+    font-size: 12px;
+    color: #6B7280;
+    margin-left: auto;
+}
+
+.checklist-items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.checklist-item {
+    display: flex;
+    gap: 12px;
+    padding: 16px;
+    background: #F3F4F6;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.checklist-item:hover {
+    background: #EEF2FF;
+    transform: translateX(5px);
+}
+
+.check-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #4F46E5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.check-icon i {
+    color: white;
+    font-size: 12px;
+}
+
+.check-content h4 {
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.check-content > p {
+    color: #6B7280;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.check-example {
+    background: white;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    color: #6B7280;
+    border-left: 3px solid #4F46E5;
+}
+
+.example-label {
+    color: #4F46E5;
+    font-weight: 600;
+    margin-right: 6px;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
     .hero {
@@ -1168,6 +1272,7 @@ button {
     .tools-categories { grid-template-columns: 1fr; }
     .tips-grid { grid-template-columns: repeat(2, 1fr); }
     .blog-grid { grid-template-columns: repeat(2, 1fr); }
+    .checklist-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
@@ -1181,7 +1286,7 @@ button {
     .roadmap-skills { flex-wrap: wrap; }
     .roadmap-tasks ul { grid-template-columns: 1fr; }
     .roadmap-metrics { flex-wrap: wrap; }
-    .skills-grid, .ai-grid, .tips-grid, .blog-grid, .community-grid { grid-template-columns: 1fr; }
+    .skills-grid, .ai-grid, .tips-grid, .blog-grid, .community-grid, .checklist-grid { grid-template-columns: 1fr; }
     .workflow-steps { flex-wrap: wrap; }
     .workflow-arrow { display: none; }
     .cta h2 { font-size: 28px; }
