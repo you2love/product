@@ -3,9 +3,394 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>优秀产品经理成长指南 | 2026</title>
+    <title>优秀产品经理成长指南</title>
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #1F2937;
+            background: #fff;
+        }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        
+        .navbar {
+            position: fixed; top: 0; left: 0; right: 0;
+            background: rgba(255,255,255,0.98);
+            border-bottom: 1px solid #E5E7EB;
+            z-index: 1000;
+        }
+        .nav-container {
+            max-width: 1400px; margin: 0 auto; padding: 0 24px; height: 72px;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .logo {
+            display: flex; align-items: center; gap: 10px;
+            font-size: 22px; font-weight: 700; color: #4F46E5;
+        }
+        .nav-links { display: flex; gap: 36px; }
+        .nav-links a {
+            font-weight: 500; color: #6B7280;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: #4F46E5; }
+        
+        .hero {
+            padding: 140px 24px 80px; max-width: 1400px; margin: 0 auto;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+            min-height: 100vh;
+        }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: linear-gradient(135deg, #EEF2FF, #E0E7FF);
+            color: #4F46E5; padding: 8px 16px; border-radius: 50px;
+            font-size: 14px; font-weight: 500; margin-bottom: 24px;
+        }
+        .hero h1 {
+            font-size: 52px; font-weight: 700; line-height: 1.2; margin-bottom: 24px;
+            background: linear-gradient(135deg, #1F2937, #4F46E5);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero p {
+            font-size: 18px; color: #6B7280; margin-bottom: 32px; max-width: 500px;
+        }
+        .hero-stats { display: flex; gap: 48px; margin-bottom: 40px; }
+        .stat-number { font-size: 32px; font-weight: 700; color: #4F46E5; }
+        .stat-label { font-size: 14px; color: #6B7280; }
+        .hero-actions { display: flex; gap: 16px; margin-bottom: 48px; }
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            padding: 14px 28px; border-radius: 10px; font-weight: 500; font-size: 15px;
+            transition: all 0.3s; cursor: pointer;
+        }
+        .btn-primary { background: #4F46E5; color: white; }
+        .btn-primary:hover { background: #4338CA; transform: translateY(-2px); box-shadow: 0 10px 20px rgba(79,70,229,0.3); }
+        .btn-outline { border: 2px solid #4F46E5; color: #4F46E5; }
+        .btn-outline:hover { background: #4F46E5; color: white; }
+        .btn-lg { padding: 16px 32px; font-size: 16px; }
+        
+        .hero-visual { position: relative; height: 450px; }
+        .floating-cards { position: relative; width: 100%; height: 100%; }
+        .floating-cards .card {
+            position: absolute; background: white; border-radius: 16px;
+            padding: 18px 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            display: flex; align-items: center; gap: 12px; font-weight: 600;
+        }
+        .card-icon {
+            width: 44px; height: 44px; border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px; color: white;
+        }
+        .card-1 { top: 10%; left: 10%; }
+        .card-1 .card-icon { background: linear-gradient(135deg, #4F46E5, #818CF8); }
+        .card-2 { top: 25%; right: 5%; }
+        .card-2 .card-icon { background: linear-gradient(135deg, #10B981, #34D399); }
+        .card-3 { bottom: 30%; left: 20%; }
+        .card-3 .card-icon { background: linear-gradient(135deg, #F59E0B, #FBBF24); }
+        .card-4 { bottom: 10%; right: 20%; }
+        .card-4 .card-icon { background: linear-gradient(135deg, #EC4899, #F472B6); }
+        
+        .section { padding: 100px 0; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #EEF2FF, #E0E7FF);
+            color: #4F46E5; padding: 8px 20px; border-radius: 50px;
+            font-size: 14px; font-weight: 600; margin-bottom: 16px;
+        }
+        .section-header h2 { font-size: 38px; font-weight: 700; margin-bottom: 16px; }
+        .section-header p { font-size: 17px; color: #6B7280; max-width: 600px; margin: 0 auto; }
+        
+        .roadmap { background: #F9FAFB; }
+        .roadmap-timeline { display: flex; flex-direction: column; gap: 24px; }
+        .roadmap-item {
+            background: white; border-radius: 16px; padding: 32px;
+            display: grid; grid-template-columns: 120px 1fr; gap: 32px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .roadmap-phase {
+            font-size: 14px; font-weight: 600; color: #4F46E5;
+            padding: 8px 16px; background: #F3F4F6; border-radius: 10px;
+            text-align: center; height: fit-content;
+        }
+        .roadmap-content h3 { font-size: 22px; margin-bottom: 8px; }
+        .roadmap-duration { color: #6B7280; font-size: 14px; margin-bottom: 16px; }
+        .roadmap-skills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+        .skill-tag {
+            padding: 6px 14px; background: #F3F4F6; border-radius: 50px;
+            font-size: 13px; color: #6B7280;
+        }
+        .roadmap-tasks h4 { font-size: 14px; color: #6B7280; margin-bottom: 10px; }
+        .roadmap-tasks ul { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+        .roadmap-tasks li {
+            font-size: 14px; color: #6B7280; display: flex; align-items: center; gap: 8px;
+        }
+        .roadmap-tasks li::before { content: '•'; color: #4F46E5; }
+        .roadmap-metrics { display: flex; gap: 24px; margin-top: 16px; }
+        .roadmap-metrics span { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #6B7280; }
+        .roadmap-metrics i { color: #10B981; }
+        
+        .skills { background: #fff; }
+        .skills-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+        .skill-card {
+            background: white; border-radius: 16px; padding: 28px;
+            border: 1px solid #E5E7EB; transition: all 0.3s;
+        }
+        .skill-card:hover {
+            transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-color: #4F46E5;
+        }
+        .skill-icon {
+            width: 60px; height: 60px; border-radius: 12px;
+            background: linear-gradient(135deg, #EEF2FF, #E0E7FF);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 26px; color: #4F46E5; margin-bottom: 18px;
+        }
+        .skill-card h3 { font-size: 18px; margin-bottom: 10px; }
+        .skill-card > p { color: #6B7280; font-size: 14px; margin-bottom: 14px; }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
+        .skill-tags span { padding: 4px 10px; background: #F3F4F6; border-radius: 50px; font-size: 12px; color: #6B7280; }
+        .skill-progress { height: 6px; background: #F3F4F6; border-radius: 3px; overflow: hidden; margin-bottom: 16px; }
+        .progress-bar {
+            height: 100%; background: linear-gradient(90deg, #4F46E5, #818CF8);
+            border-radius: 3px; width: var(--progress);
+        }
+        .skill-tips { padding-top: 16px; border-top: 1px solid #E5E7EB; }
+        .skill-tips h4 { font-size: 13px; color: #6B7280; margin-bottom: 10px; }
+        .skill-tips ul li { font-size: 13px; color: #6B7280; margin-bottom: 6px; padding-left: 16px; position: relative; }
+        .skill-tips ul li::before { content: '→'; position: absolute; left: 0; color: #4F46E5; }
+        
+        .ai-section {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white; padding: 100px 0;
+        }
+        .ai-section .section-tag { background: rgba(79,70,229,0.3); color: #A5B4FC; }
+        .ai-section .section-header h2 { color: white; }
+        .ai-section .section-header p { color: rgba(255,255,255,0.7); }
+        .ai-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-bottom: 60px; }
+        .ai-card {
+            background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);
+            border-radius: 16px; padding: 28px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s;
+        }
+        .ai-card:hover { background: rgba(255,255,255,0.15); transform: translateY(-5px); }
+        .ai-icon {
+            width: 60px; height: 60px; border-radius: 12px;
+            background: linear-gradient(135deg, #4F46E5, #8B5CF6);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 26px; color: white; margin-bottom: 18px;
+        }
+        .ai-card h3 { font-size: 18px; margin-bottom: 10px; color: white; }
+        .ai-card > p { color: rgba(255,255,255,0.7); font-size: 14px; margin-bottom: 16px; }
+        .ai-topics { display: flex; flex-wrap: wrap; gap: 6px; }
+        .ai-topics span {
+            padding: 4px 10px; background: rgba(79,70,229,0.3);
+            border-radius: 50px; font-size: 12px; color: #A5B4FC;
+        }
+        .ai-workflow {
+            background: rgba(255,255,255,0.05); border-radius: 16px; padding: 32px;
+        }
+        .ai-workflow h3 { text-align: center; font-size: 20px; margin-bottom: 32px; color: white; }
+        .workflow-steps { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
+        .workflow-step { text-align: center; }
+        .step-number {
+            width: 48px; height: 48px; border-radius: 50%;
+            background: #4F46E5; color: white;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px; font-weight: 700; margin: 0 auto 12px;
+        }
+        .step-content h4 { font-size: 15px; margin-bottom: 4px; color: white; }
+        .step-content p { font-size: 13px; color: rgba(255,255,255,0.6); }
+        .workflow-arrow { color: rgba(255,255,255,0.3); font-size: 20px; }
+        
+        .tools-section { background: #F9FAFB; }
+        .tools-categories { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+        .tool-category {
+            background: white; border-radius: 16px; padding: 28px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .category-header {
+            display: flex; align-items: center; gap: 12px;
+            margin-bottom: 24px; padding-bottom: 16px;
+            border-bottom: 1px solid #E5E7EB;
+        }
+        .category-header i { font-size: 24px; color: #4F46E5; }
+        .category-header h3 { font-size: 18px; }
+        .tool-list { display: flex; flex-direction: column; gap: 16px; }
+        .tool-item {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 14px; background: #F3F4F6; border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .tool-item:hover { transform: translateX(5px); }
+        .tool-item h4 { font-size: 15px; margin-bottom: 4px; }
+        .tool-item p { font-size: 13px; color: #6B7280; }
+        .tool-level {
+            padding: 4px 10px; border-radius: 50px; font-size: 11px; font-weight: 600;
+            background: #4F46E5; color: white;
+        }
+        
+        .resources { background: #fff; }
+        .resource-tabs { display: flex; justify-content: center; gap: 12px; margin-bottom: 48px; flex-wrap: wrap; }
+        .resource-tab {
+            padding: 12px 24px; border-radius: 50px; font-weight: 500;
+            color: #6B7280; background: white; border: 1px solid #E5E7EB;
+            transition: all 0.3s;
+        }
+        .resource-tab:hover, .resource-tab.active {
+            border-color: #4F46E5; color: #4F46E5;
+        }
+        .resource-tab.active { background: #4F46E5; color: white; border-color: #4F46E5; }
+        .resource-panels > div { display: none; }
+        .resource-panels > div:first-child { display: block; }
+        .resource-list { max-width: 800px; margin: 0 auto; }
+        .resource-item {
+            display: flex; align-items: center; gap: 20px;
+            padding: 20px; background: white; border-radius: 12px;
+            margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid #E5E7EB;
+        }
+        .resource-rank {
+            font-size: 22px; font-weight: 700; color: #4F46E5; width: 36px;
+        }
+        .resource-info { flex: 1; }
+        .resource-info h4 { font-size: 16px; margin-bottom: 4px; }
+        .resource-info p { color: #6B7280; font-size: 14px; }
+        .resource-tags { display: flex; gap: 8px; }
+        .resource-tags .tag {
+            padding: 4px 10px; background: #F3F4F6; border-radius: 50px;
+            font-size: 11px; color: #6B7280;
+        }
+        .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .blog-item {
+            background: white; border-radius: 16px; padding: 24px;
+            text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid #E5E7EB;
+        }
+        .blog-icon {
+            width: 56px; height: 56px; border-radius: 12px;
+            background: linear-gradient(135deg, #4F46E5, #818CF8);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 24px; color: white; margin: 0 auto 16px;
+        }
+        .blog-item h4 { font-size: 16px; margin-bottom: 8px; }
+        .blog-item p { font-size: 14px; color: #6B7280; }
+        .community-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .community-item {
+            background: white; border-radius: 16px; padding: 24px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #E5E7EB;
+        }
+        .community-icon {
+            width: 56px; height: 56px; border-radius: 12px;
+            background: linear-gradient(135deg, #10B981, #34D399);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 24px; color: white; margin-bottom: 16px;
+        }
+        .community-item h4 { font-size: 16px; margin-bottom: 8px; }
+        .community-item p { color: #6B7280; font-size: 14px; margin-bottom: 12px; }
+        .community-members { font-size: 13px; color: #4F46E5; font-weight: 500; }
+        .newsletter-list { max-width: 700px; margin: 0 auto; }
+        .newsletter-item {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 20px; background: white; border-radius: 12px;
+            margin-bottom: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .newsletter-info h4 { font-size: 16px; margin-bottom: 4px; }
+        .newsletter-info p { font-size: 14px; color: #6B7280; }
+        .newsletter-frequency {
+            padding: 6px 14px; background: #F3F4F6; border-radius: 50px;
+            font-size: 13px; color: #6B7280;
+        }
+        
+        .tips-section { background: #F9FAFB; }
+        .tips-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .tip-card {
+            background: white; border-radius: 16px; padding: 28px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #E5E7EB;
+        }
+        .tip-number {
+            font-size: 48px; font-weight: 700; color: #4F46E5;
+            opacity: 0.2; margin-bottom: 16px;
+        }
+        .tip-card h3 { font-size: 18px; margin-bottom: 10px; }
+        .tip-card > p { color: #6B7280; font-size: 14px; margin-bottom: 16px; }
+        .tip-actions { display: flex; flex-direction: column; gap: 8px; }
+        .tip-actions span {
+            display: flex; align-items: center; gap: 8px; font-size: 13px; color: #6B7280;
+        }
+        .tip-actions i { color: #10B981; }
+        
+        .cta {
+            background: linear-gradient(135deg, #4F46E5, #7C3AED);
+            color: white; padding: 120px 0;
+        }
+        .cta-content { max-width: 700px; margin: 0 auto; text-align: center; }
+        .cta h2 { font-size: 36px; margin-bottom: 16px; }
+        .cta > p { font-size: 18px; opacity: 0.9; margin-bottom: 40px; }
+        .cta-checklist { display: flex; justify-content: center; gap: 32px; margin-bottom: 40px; flex-wrap: wrap; }
+        .check-item { display: flex; align-items: center; gap: 10px; font-size: 16px; }
+        .check-item i { color: #34D399; font-size: 20px; }
+        .cta .btn-primary { background: white; color: #4F46E5; }
+        .cta .btn-primary:hover { background: #F3F4F6; }
+        
+        .footer { background: #1F2937; color: white; padding: 80px 0 40px; }
+        .footer-grid {
+            display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px;
+        }
+        .footer-brand .logo { color: white; margin-bottom: 16px; }
+        .footer-brand p { color: #9CA3AF; font-size: 14px; margin-bottom: 20px; }
+        .social-links { display: flex; gap: 12px; }
+        .social-links a {
+            width: 40px; height: 40px; border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex; align-items: center; justify-content: center;
+            transition: background 0.3s;
+        }
+        .social-links a:hover { background: #4F46E5; }
+        .footer-links h4 { font-size: 16px; margin-bottom: 20px; }
+        .footer-links ul li { margin-bottom: 12px; }
+        .footer-links a { color: #9CA3AF; font-size: 14px; transition: color 0.3s; }
+        .footer-links a:hover { color: white; }
+        .footer-bottom {
+            padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+        }
+        .footer-bottom p { color: #9CA3AF; font-size: 14px; }
+        
+        @media (max-width: 1024px) {
+            .hero { grid-template-columns: 1fr; text-align: center; }
+            .hero p { margin: 0 auto 32px; }
+            .hero-stats { justify-content: center; }
+            .hero-actions { justify-content: center; }
+            .hero-visual { display: none; }
+            .skills-grid { grid-template-columns: repeat(2, 1fr); }
+            .ai-grid { grid-template-columns: repeat(2, 1fr); }
+            .tools-categories { grid-template-columns: 1fr; }
+            .tips-grid { grid-template-columns: repeat(2, 1fr); }
+            .blog-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 36px; }
+            .hero-stats { flex-direction: column; gap: 24px; }
+            .hero-actions { flex-direction: column; }
+            .section-header h2 { font-size: 28px; }
+            .roadmap-item { grid-template-columns: 1fr; }
+            .roadmap-tasks ul { grid-template-columns: 1fr; }
+            .skills-grid, .ai-grid, .tips-grid, .blog-grid, .community-grid { grid-template-columns: 1fr; }
+            .workflow-steps { flex-wrap: wrap; }
+            .workflow-arrow { display: none; }
+            .cta h2 { font-size: 28px; }
+            .cta-checklist { flex-direction: column; gap: 16px; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -15,49 +400,31 @@
                 <span>产品经理成长</span>
             </div>
             <ul class="nav-links">
-                <li><a href="#home">首页</a></li>
                 <li><a href="#roadmap">成长路径</a></li>
                 <li><a href="#skills">核心能力</a></li>
                 <li><a href="#ai">AI时代</a></li>
                 <li><a href="#tools">工具箱</a></li>
-                <li><a href="#resources">资源</a></li>
             </ul>
-            <div class="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
         </div>
     </nav>
 
-    <section id="home" class="hero">
+    <section class="hero">
         <div class="hero-content">
             <div class="hero-badge">
                 <i class="fas fa-star"></i>
-                <span>2026 全新版本</span>
+                <span>全新版本</span>
             </div>
             <h1>如何成为<br>优秀的产品经理</h1>
-            <p>系统化掌握2026年产品经理核心能力，从思维、方法论到实战经验，助你成为行业顶尖的产品人才</p>
+            <p>系统化掌握产品经理核心能力，从思维、方法论到实战经验，助你成为行业顶尖的产品人才</p>
             <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number">10+</span>
-                    <span class="stat-label">核心能力</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">8</span>
-                    <span class="stat-label">成长阶段</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label">方法论</span>
-                </div>
+                <div><span class="stat-number">10+</span><span class="stat-label">核心能力</span></div>
+                <div><span class="stat-number">5</span><span class="stat-label">成长阶段</span></div>
+                <div><span class="stat-number">50+</span><span class="stat-label">方法论</span></div>
             </div>
             <div class="hero-actions">
                 <a href="#roadmap" class="btn btn-primary btn-lg">
                     <i class="fas fa-road"></i>
                     开始探索
-                </a>
-                <a href="#resources" class="btn btn-outline btn-lg">
-                    <i class="fas fa-book"></i>
-                    推荐资源
                 </a>
             </div>
         </div>
@@ -90,7 +457,6 @@
                 <h2>产品经理成长阶梯</h2>
                 <p>从新手到专家的进阶之路，每个阶段都有明确的能力要求和成长目标</p>
             </div>
-
             <div class="roadmap-timeline">
                 <div class="roadmap-item">
                     <div class="roadmap-phase">阶段一</div>
@@ -118,7 +484,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="roadmap-item">
                     <div class="roadmap-phase">阶段二</div>
                     <div class="roadmap-content">
@@ -145,7 +510,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="roadmap-item">
                     <div class="roadmap-phase">阶段三</div>
                     <div class="roadmap-content">
@@ -172,7 +536,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="roadmap-item">
                     <div class="roadmap-phase">阶段四</div>
                     <div class="roadmap-content">
@@ -199,7 +562,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="roadmap-item">
                     <div class="roadmap-phase">阶段五</div>
                     <div class="roadmap-content">
@@ -234,15 +596,12 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">核心能力</span>
-                <h2>2026年产品经理必备能力图谱</h2>
+                <h2>产品经理必备能力图谱</h2>
                 <p>掌握这些核心能力，成为行业抢手的顶尖产品人才</p>
             </div>
-
             <div class="skills-grid">
                 <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
+                    <div class="skill-icon"><i class="fas fa-brain"></i></div>
                     <h3>产品思维</h3>
                     <p>结构化思考，系统化解决问题，从全局视角看待产品</p>
                     <div class="skill-tags">
@@ -250,9 +609,7 @@
                         <span>系统性思维</span>
                         <span>批判性思考</span>
                     </div>
-                    <div class="skill-progress">
-                        <div class="progress-bar" style="--progress: 95%"></div>
-                    </div>
+                    <div class="skill-progress"><div class="progress-bar" style="--progress: 95%"></div></div>
                     <div class="skill-tips">
                         <h4>提升建议：</h4>
                         <ul>
@@ -262,11 +619,8 @@
                         </ul>
                     </div>
                 </div>
-
                 <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-search"></i>
-                    </div>
+                    <div class="skill-icon"><i class="fas fa-search"></i></div>
                     <h3>用户洞察</h3>
                     <p>深入理解用户需求，发现真实痛点，创造用户价值</p>
                     <div class="skill-tags">
@@ -274,9 +628,7 @@
                         <span>行为分析</span>
                         <span>同理心地图</span>
                     </div>
-                    <div class="skill-progress">
-                        <div class="progress-bar" style="--progress: 90%"></div>
-                    </div>
+                    <div class="skill-progress"><div class="progress-bar" style="--progress: 90%"></div></div>
                     <div class="skill-tips">
                         <h4>提升建议：</h4>
                         <ul>
@@ -286,11 +638,8 @@
                         </ul>
                     </div>
                 </div>
-
                 <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
+                    <div class="skill-icon"><i class="fas fa-chart-bar"></i></div>
                     <h3>数据分析</h3>
                     <p>数据驱动决策，用数据验证假设，发现增长机会</p>
                     <div class="skill-tags">
@@ -298,9 +647,7 @@
                         <span>SQL查询</span>
                         <span>归因分析</span>
                     </div>
-                    <div class="skill-progress">
-                        <div class="progress-bar" style="--progress: 85%"></div>
-                    </div>
+                    <div class="skill-progress"><div class="progress-bar" style="--progress: 85%"></div></div>
                     <div class="skill-tips">
                         <h4>提升建议：</h4>
                         <ul>
@@ -310,11 +657,8 @@
                         </ul>
                     </div>
                 </div>
-
                 <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-pencil-ruler"></i>
-                    </div>
+                    <div class="skill-icon"><i class="fas fa-pencil-ruler"></i></div>
                     <h3>产品设计</h3>
                     <p>从概念到原型，打造优秀用户体验，设计创新解决方案</p>
                     <div class="skill-tags">
@@ -322,9 +666,7 @@
                         <span>信息架构</span>
                         <span>原型工具</span>
                     </div>
-                    <div class="skill-progress">
-                        <div class="progress-bar" style="--progress: 80%"></div>
-                    </div>
+                    <div class="skill-progress"><div class="progress-bar" style="--progress: 80%"></div></div>
                     <div class="skill-tips">
                         <h4>提升建议：</h4>
                         <ul>
@@ -334,11 +676,8 @@
                         </ul>
                     </div>
                 </div>
-
                 <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-comments"></i>
-                    </div>
+                    <div class="skill-icon"><i class="fas fa-comments"></i></div>
                     <h3>沟通协作</h3>
                     <p>有效传达产品价值，协调各方资源，推动项目落地</p>
                     <div class="skill-tags">
@@ -346,9 +685,7 @@
                         <span>跨部门协作</span>
                         <span>演讲表达</span>
                     </div>
-                    <div class="skill-progress">
-                        <div class="progress-bar" style="--progress: 88%"></div>
-                    </div>
+                    <div class="skill-progress"><div class="progress-bar" style="--progress: 88%"></div></div>
                     <div class="skill-tips">
                         <h4>提升建议：</h4>
                         <ul>
@@ -358,11 +695,8 @@
                         </ul>
                     </div>
                 </div>
-
                 <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-tasks"></i>
-                    </div>
+                    <div class="skill-icon"><i class="fas fa-tasks"></i></div>
                     <h3>项目管理</h3>
                     <p>有效规划资源，管理风险，确保项目按时高质量交付</p>
                     <div class="skill-tags">
@@ -370,9 +704,7 @@
                         <span>优先级排序</span>
                         <span>风险管理</span>
                     </div>
-                    <div class="skill-progress">
-                        <div class="progress-bar" style="--progress: 82%"></div>
-                    </div>
+                    <div class="skill-progress"><div class="progress-bar" style="--progress: 82%"></div></div>
                     <div class="skill-tips">
                         <h4>提升建议：</h4>
                         <ul>
@@ -382,11 +714,8 @@
                         </ul>
                     </div>
                 </div>
-
                 <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-chess-knight"></i>
-                    </div>
+                    <div class="skill-icon"><i class="fas fa-chess-knight"></i></div>
                     <h3>战略思维</h3>
                     <p>从商业角度思考产品，制定长期发展规划，平衡多方利益</p>
                     <div class="skill-tags">
@@ -394,9 +723,7 @@
                         <span>竞争格局</span>
                         <span>增长策略</span>
                     </div>
-                    <div class="skill-progress">
-                        <div class="progress-bar" style="--progress: 75%"></div>
-                    </div>
+                    <div class="skill-progress"><div class="progress-bar" style="--progress: 75%"></div></div>
                     <div class="skill-tips">
                         <h4>提升建议：</h4>
                         <ul>
@@ -406,11 +733,8 @@
                         </ul>
                     </div>
                 </div>
-
                 <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
+                    <div class="skill-icon"><i class="fas fa-lightbulb"></i></div>
                     <h3>创新能力</h3>
                     <p>突破思维定式，发现新机会，创造差异化产品价值</p>
                     <div class="skill-tags">
@@ -418,9 +742,7 @@
                         <span>实验思维</span>
                         <span>快速迭代</span>
                     </div>
-                    <div class="skill-progress">
-                        <div class="progress-bar" style="--progress: 78%"></div>
-                    </div>
+                    <div class="skill-progress"><div class="progress-bar" style="--progress: 78%"></div></div>
                     <div class="skill-tips">
                         <h4>提升建议：</h4>
                         <ul>
@@ -434,19 +756,16 @@
         </div>
     </section>
 
-    <section id="ai" class="section ai-section">
+    <section id="ai" class="ai-section">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">AI时代</span>
-                <h2>2026 AI产品经理能力要求</h2>
+                <h2>AI产品经理能力要求</h2>
                 <p>掌握AI技术应用，成为下一代AI产品专家</p>
             </div>
-
             <div class="ai-grid">
                 <div class="ai-card">
-                    <div class="ai-icon">
-                        <i class="fas fa-microchip"></i>
-                    </div>
+                    <div class="ai-icon"><i class="fas fa-microchip"></i></div>
                     <h3>AI技术理解</h3>
                     <p>理解机器学习、深度学习、自然语言处理、计算机视觉等AI核心技术原理</p>
                     <div class="ai-topics">
@@ -456,11 +775,8 @@
                         <span>AI评估方法</span>
                     </div>
                 </div>
-
                 <div class="ai-card">
-                    <div class="ai-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
+                    <div class="ai-icon"><i class="fas fa-cogs"></i></div>
                     <h3>AI产品设计</h3>
                     <p>设计AI产品体验，处理不确定性，平衡AI能力与用户预期</p>
                     <div class="ai-topics">
@@ -470,11 +786,8 @@
                         <span>可解释性</span>
                     </div>
                 </div>
-
                 <div class="ai-card">
-                    <div class="ai-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
+                    <div class="ai-icon"><i class="fas fa-database"></i></div>
                     <h3>数据工程</h3>
                     <p>理解数据管道，数据质量控制，数据标注与管理</p>
                     <div class="ai-topics">
@@ -484,11 +797,8 @@
                         <span>数据合规</span>
                     </div>
                 </div>
-
                 <div class="ai-card">
-                    <div class="ai-icon">
-                        <i class="fas fa-balance-scale"></i>
-                    </div>
+                    <div class="ai-icon"><i class="fas fa-balance-scale"></i></div>
                     <h3>AI伦理与合规</h3>
                     <p>理解AI伦理问题，隐私保护，算法公平性，可解释性要求</p>
                     <div class="ai-topics">
@@ -499,7 +809,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="ai-workflow">
                 <h3>AI产品开发流程</h3>
                 <div class="workflow-steps">
@@ -554,7 +863,6 @@
                 <h2>产品经理常用工具指南</h2>
                 <p>掌握这些工具，提升工作效率，专注产品本身</p>
             </div>
-
             <div class="tools-categories">
                 <div class="tool-category">
                     <div class="category-header">
@@ -563,23 +871,28 @@
                     </div>
                     <div class="tool-list">
                         <div class="tool-item">
-                            <h4>Figma</h4>
-                            <p>协作式界面设计工具</p>
+                            <div>
+                                <h4>Figma</h4>
+                                <p>协作式界面设计工具</p>
+                            </div>
                             <span class="tool-level">必备</span>
                         </div>
                         <div class="tool-item">
-                            <h4>Axure RP</h4>
-                            <p>专业交互原型工具</p>
+                            <div>
+                                <h4>Axure RP</h4>
+                                <p>专业交互原型工具</p>
+                            </div>
                             <span class="tool-level">进阶</span>
                         </div>
                         <div class="tool-item">
-                            <h4>Sketch</h4>
-                            <p>Mac原生设计工具</p>
+                            <div>
+                                <h4>Sketch</h4>
+                                <p>Mac原生设计工具</p>
+                            </div>
                             <span class="tool-level">推荐</span>
                         </div>
                     </div>
                 </div>
-
                 <div class="tool-category">
                     <div class="category-header">
                         <i class="fas fa-database"></i>
@@ -587,23 +900,28 @@
                     </div>
                     <div class="tool-list">
                         <div class="tool-item">
-                            <h4>SQL</h4>
-                            <p>数据查询与分析</p>
+                            <div>
+                                <h4>SQL</h4>
+                                <p>数据查询与分析</p>
+                            </div>
                             <span class="tool-level">必备</span>
                         </div>
                         <div class="tool-item">
-                            <h4>Python</h4>
-                            <p>数据处理与可视化</p>
+                            <div>
+                                <h4>Python</h4>
+                                <p>数据处理与可视化</p>
+                            </div>
                             <span class="tool-level">进阶</span>
                         </div>
                         <div class="tool-item">
-                            <h4>Tableau</h4>
-                            <p>商业智能可视化</p>
+                            <div>
+                                <h4>Tableau</h4>
+                                <p>商业智能可视化</p>
+                            </div>
                             <span class="tool-level">推荐</span>
                         </div>
                     </div>
                 </div>
-
                 <div class="tool-category">
                     <div class="category-header">
                         <i class="fas fa-project-diagram"></i>
@@ -611,23 +929,28 @@
                     </div>
                     <div class="tool-list">
                         <div class="tool-item">
-                            <h4>Jira</h4>
-                            <p>敏捷项目管理</p>
+                            <div>
+                                <h4>Jira</h4>
+                                <p>敏捷项目管理</p>
+                            </div>
                             <span class="tool-level">必备</span>
                         </div>
                         <div class="tool-item">
-                            <h4>Notion</h4>
-                            <p>知识管理与协作</p>
+                            <div>
+                                <h4>Notion</h4>
+                                <p>知识管理与协作</p>
+                            </div>
                             <span class="tool-level">推荐</span>
                         </div>
                         <div class="tool-item">
-                            <h4>飞书/钉钉</h4>
-                            <p>团队协作平台</p>
+                            <div>
+                                <h4>飞书/钉钉</h4>
+                                <p>团队协作平台</p>
+                            </div>
                             <span class="tool-level">必备</span>
                         </div>
                     </div>
                 </div>
-
                 <div class="tool-category">
                     <div class="category-header">
                         <i class="fas fa-users"></i>
@@ -635,214 +958,25 @@
                     </div>
                     <div class="tool-list">
                         <div class="tool-item">
-                            <h4>问卷星/腾讯问卷</h4>
-                            <p>在线问卷调研</p>
+                            <div>
+                                <h4>问卷星/腾讯问卷</h4>
+                                <p>在线问卷调研</p>
+                            </div>
                             <span class="tool-level">必备</span>
                         </div>
                         <div class="tool-item">
-                            <h4>神策/ GrowingIO</h4>
-                            <p>用户行为分析</p>
+                            <div>
+                                <h4>神策/GrowingIO</h4>
+                                <p>用户行为分析</p>
+                            </div>
                             <span class="tool-level">进阶</span>
                         </div>
                         <div class="tool-item">
-                            <h4>Miro</h4>
-                            <p>在线白板协作</p>
+                            <div>
+                                <h4>Miro</h4>
+                                <p>在线白板协作</p>
+                            </div>
                             <span class="tool-level">推荐</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="resources" class="section resources">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">学习资源</span>
-                <h2>精选推荐资源</h2>
-                <p>书籍、博客、社区，持续学习提升自己</p>
-            </div>
-
-            <div class="resource-tabs">
-                <button class="resource-tab active" data-type="books">📚 书籍推荐</button>
-                <button class="resource-tab" data-type="blogs">📰 博客媒体</button>
-                <button class="resource-tab" data-type="communities">👥 社区</button>
-                <button class="resource-tab" data-type="newsletters">📧 Newsletter</button>
-            </div>
-
-            <div class="resource-content">
-                <div class="resource-panel active" id="books">
-                    <div class="resource-list">
-                        <div class="resource-item">
-                            <div class="resource-rank">01</div>
-                            <div class="resource-info">
-                                <h4>《启示录：打造用户喜爱的产品》</h4>
-                                <p>Marty Cagan · 产品管理经典之作</p>
-                            </div>
-                            <div class="resource-tags">
-                                <span class="tag">必读</span>
-                                <span class="tag">经典</span>
-                            </div>
-                        </div>
-                        <div class="resource-item">
-                            <div class="resource-rank">02</div>
-                            <div class="resource-info">
-                                <h4>《精益创业》</h4>
-                                <p>Eric Ries · 创业方法论</p>
-                            </div>
-                            <div class="resource-tags">
-                                <span class="tag">必读</span>
-                                <span class="tag">方法论</span>
-                            </div>
-                        </div>
-                        <div class="resource-item">
-                            <div class="resource-rank">03</div>
-                            <div class="resource-info">
-                                <h4>《俞军产品方法论》</h4>
-                                <p>俞军 · 中国产品经理必读</p>
-                            </div>
-                            <div class="resource-tags">
-                                <span class="tag">必读</span>
-                                <span class="tag">本土</span>
-                            </div>
-                        </div>
-                        <div class="resource-item">
-                            <div class="resource-rank">04</div>
-                            <div class="resource-info">
-                                <h4>《原则》</h4>
-                                <p>Ray Dalio · 决策与思维框架</p>
-                            </div>
-                            <div class="resource-tags">
-                                <span class="tag">思维</span>
-                                <span class="tag">推荐</span>
-                            </div>
-                        </div>
-                        <div class="resource-item">
-                            <div class="resource-rank">05</div>
-                            <div class="resource-info">
-                                <h4>《思考，快与慢》</h4>
-                                <p>Daniel Kahneman · 行为经济学</p>
-                            </div>
-                            <div class="resource-tags">
-                                <span class="tag">心理学</span>
-                                <span class="tag">推荐</span>
-                            </div>
-                        </div>
-                        <div class="resource-item">
-                            <div class="resource-rank">06</div>
-                            <div class="resource-info">
-                                <h4>《AI产品经理手册》</h4>
-                                <p>2024 · AI产品设计指南</p>
-                            </div>
-                            <div class="resource-tags">
-                                <span class="tag">AI</span>
-                                <span class="tag">新版</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="resource-panel" id="blogs">
-                    <div class="blog-grid">
-                        <div class="blog-item">
-                            <div class="blog-icon"><i class="fas fa-globe"></i></div>
-                            <h4>Product Hunt Blog</h4>
-                            <p>全球新产品发现与趋势</p>
-                        </div>
-                        <div class="blog-item">
-                            <div class="blog-icon"><i class="fas fa-chart-line"></i></div>
-                            <h4>Sequoia Blog</h4>
-                            <p>顶级VC的产品洞察</p>
-                        </div>
-                        <div class="blog-item">
-                            <div class="blog-icon"><i class="fab fa-medium"></i></div>
-                            <h4>Medium Product</h4>
-                            <p>优质产品文章聚合</p>
-                        </div>
-                        <div class="blog-item">
-                            <div class="blog-icon"><i class="fas fa-language"></i></div>
-                            <h4>人人都是产品经理</h4>
-                            <p>国内最大产品社区</p>
-                        </div>
-                        <div class="blog-item">
-                            <div class="blog-icon"><i class="fas fa-bolt"></i></div>
-                            <h4>即刻App</h4>
-                            <p>产品经理聚集地</p>
-                        </div>
-                        <div class="blog-item">
-                            <div class="blog-icon"><i class="fab fa-weixin"></i></div>
-                            <h4>知识星球</h4>
-                            <p>深度讨论社群</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="resource-panel" id="communities">
-                    <div class="community-grid">
-                        <div class="community-item">
-                            <div class="community-icon">
-                                <i class="fab fa-weixin"></i>
-                            </div>
-                            <h4>微信群</h4>
-                            <p>各城市PM交流群</p>
-                            <span class="community-members">高频交流</span>
-                        </div>
-                        <div class="community-item">
-                            <div class="community-icon">
-                                <i class="fab fa-slack"></i>
-                            </div>
-                            <h4>Product Love</h4>
-                            <p>国际PM社区</p>
-                            <span class="community-members">全球视野</span>
-                        </div>
-                        <div class="community-item">
-                            <div class="community-icon">
-                                <i class="fab fa-discord"></i>
-                            </div>
-                            <h4>Discord PM Groups</h4>
-                            <p>实时讨论社区</p>
-                            <span class="community-members">活跃氛围</span>
-                        </div>
-                        <div class="community-item">
-                            <div class="community-icon">
-                                <i class="fab fa-github"></i>
-                            </div>
-                            <h4>GitHub</h4>
-                            <p>开源产品项目</p>
-                            <span class="community-members">学习源码</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="resource-panel" id="newsletters">
-                    <div class="newsletter-list">
-                        <div class="newsletter-item">
-                            <div class="newsletter-info">
-                                <h4>Lenny's Newsletter</h4>
-                                <p>全球最受欢迎的产品Newsletter</p>
-                            </div>
-                            <span class="newsletter-frequency">每周</span>
-                        </div>
-                        <div class="newsletter-item">
-                            <div class="newsletter-info">
-                                <h4>产品沉思录</h4>
-                                <p>国内优质产品分析</p>
-                            </div>
-                            <span class="newsletter-frequency">每周</span>
-                        </div>
-                        <div class="newsletter-item">
-                            <div class="newsletter-info">
-                                <h4>36氪Pro</h4>
-                                <p>科技商业资讯</p>
-                            </div>
-                            <span class="newsletter-frequency">每日</span>
-                        </div>
-                        <div class="newsletter-item">
-                            <div class="newsletter-info">
-                                <h4>Productivity Weekly</h4>
-                                <p>效率工具与技巧</p>
-                            </div>
-                            <span class="newsletter-frequency">每周</span>
                         </div>
                     </div>
                 </div>
@@ -857,7 +991,6 @@
                 <h2>成为优秀产品经理的关键习惯</h2>
                 <p>这些习惯将帮助你持续成长，走在行业前沿</p>
             </div>
-
             <div class="tips-grid">
                 <div class="tip-card">
                     <div class="tip-number">01</div>
@@ -868,7 +1001,6 @@
                         <span><i class="fas fa-check"></i> 每周体验新App</span>
                     </div>
                 </div>
-
                 <div class="tip-card">
                     <div class="tip-number">02</div>
                     <h3>数据驱动决策</h3>
@@ -878,7 +1010,6 @@
                         <span><i class="fas fa-check"></i> 学习SQL基础</span>
                     </div>
                 </div>
-
                 <div class="tip-card">
                     <div class="tip-number">03</div>
                     <h3>深度用户接触</h3>
@@ -888,7 +1019,6 @@
                         <span><i class="fas fa-check"></i> 定期用户回访</span>
                     </div>
                 </div>
-
                 <div class="tip-card">
                     <div class="tip-number">04</div>
                     <h3>建立反馈循环</h3>
@@ -898,7 +1028,6 @@
                         <span><i class="fas fa-check"></i> 建立反馈渠道</span>
                     </div>
                 </div>
-
                 <div class="tip-card">
                     <div class="tip-number">05</div>
                     <h3>跨领域学习</h3>
@@ -908,7 +1037,6 @@
                         <span><i class="fas fa-check"></i> 了解设计原则</span>
                     </div>
                 </div>
-
                 <div class="tip-card">
                     <div class="tip-number">06</div>
                     <h3>输出倒逼输入</h3>
@@ -920,85 +1048,7 @@
                 </div>
             </div>
         </div>
-    </section>
+        </section>
 
-    <section class="section cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>开启你的产品经理成长之路</h2>
-                <p>掌握正确的方法论，持续学习和实践，你一定能成为优秀的产品经理</p>
-                <div class="cta-checklist">
-                    <div class="check-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>系统化学习产品方法论</span>
-                    </div>
-                    <div class="check-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>建立个人知识体系</span>
-                    </div>
-                    <div class="check-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>加入产品社区交流</span>
-                    </div>
-                </div>
-                <a href="#resources" class="btn btn-primary btn-lg">
-                    <i class="fas fa-rocket"></i>
-                    获取资源，开始行动
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <i class="fas fa-rocket"></i>
-                        <span>产品经理成长</span>
-                    </div>
-                    <p>致力于帮助更多人成为优秀的产品经理</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-weixin"></i></a>
-                        <a href="#"><i class="fab fa-weibo"></i></a>
-                        <a href="#"><i class="fab fa-zhihu"></i></a>
-                        <a href="#"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4>成长路径</h4>
-                    <ul>
-                        <li><a href="#roadmap">阶段指南</a></li>
-                        <li><a href="#skills">核心能力</a></li>
-                        <li><a href="#ai">AI时代</a></li>
-                        <li><a href="#tools">工具箱</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>资源</h4>
-                    <ul>
-                        <li><a href="#resources">书籍推荐</a></li>
-                        <li><a href="#resources">博客媒体</a></li>
-                        <li><a href="#resources">社区</a></li>
-                        <li><a href="#resources">Newsletter</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>关于</h4>
-                    <ul>
-                        <li><a href="#">关于我们</a></li>
-                        <li><a href="#">联系方式</a></li>
-                        <li><a href="#">意见反馈</a></li>
-                        <li><a href="#">友链交换</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 产品经理成长指南 · 用爱制作</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
