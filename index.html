@@ -3,313 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>产品经理学习中心 | PM Learning Hub</title>
+    <title>优秀产品经理成长指南 | 2026</title>
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- 导航栏 -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
                 <i class="fas fa-rocket"></i>
-                <span>PM Hub</span>
+                <span>产品经理成长</span>
             </div>
             <ul class="nav-links">
                 <li><a href="#home">首页</a></li>
-                <li><a href="#learning-path">学习路径</a></li>
-                <li><a href="#skills">核心技能</a></li>
-                <li><a href="#courses">课程</a></li>
+                <li><a href="#roadmap">成长路径</a></li>
+                <li><a href="#skills">核心能力</a></li>
+                <li><a href="#ai">AI时代</a></li>
+                <li><a href="#tools">工具箱</a></li>
                 <li><a href="#resources">资源</a></li>
-                <li><a href="#community">社区</a></li>
             </ul>
-            <div class="nav-actions">
-                <button class="btn btn-outline">登录</button>
-                <button class="btn btn-primary">免费开始</button>
-            </div>
             <div class="mobile-menu">
                 <i class="fas fa-bars"></i>
             </div>
         </div>
     </nav>
 
-    <!-- Hero 区域 -->
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="hero-badge">
                 <i class="fas fa-star"></i>
-                <span>已帮助 10,000+ 产品经理成长</span>
+                <span>2026 全新版本</span>
             </div>
-            <h1>成为卓越产品经理的<br>最佳学习平台</h1>
-            <p>从零基础到产品专家，系统化学习路径 + 实战项目 + 导师指导，助你快速提升产品能力</p>
+            <h1>如何成为<br>优秀的产品经理</h1>
+            <p>系统化掌握2026年产品经理核心能力，从思维、方法论到实战经验，助你成为行业顶尖的产品人才</p>
             <div class="hero-stats">
                 <div class="stat">
-                    <span class="stat-number">200+</span>
-                    <span class="stat-label">精品课程</span>
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">核心能力</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">8</span>
+                    <span class="stat-label">成长阶段</span>
                 </div>
                 <div class="stat">
                     <span class="stat-number">50+</span>
-                    <span class="stat-label">实战项目</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">100+</span>
-                    <span class="stat-label">导师资源</span>
+                    <span class="stat-label">方法论</span>
                 </div>
             </div>
             <div class="hero-actions">
-                <button class="btn btn-primary btn-lg">
-                    <i class="fas fa-play"></i>
-                    立即开始学习
-                </button>
-                <button class="btn btn-outline btn-lg">
-                    <i class="fas fa-book-open"></i>
-                    浏览课程
-                </button>
-            </div>
-            <div class="hero-trust">
-                <span>Trusted by product managers from</span>
-                <div class="company-logos">
-                    <span>腾讯</span>
-                    <span>阿里巴巴</span>
-                    <span>字节跳动</span>
-                    <span>美团</span>
-                    <span>京东</span>
-                </div>
+                <a href="#roadmap" class="btn btn-primary btn-lg">
+                    <i class="fas fa-road"></i>
+                    开始探索
+                </a>
+                <a href="#resources" class="btn btn-outline btn-lg">
+                    <i class="fas fa-book"></i>
+                    推荐资源
+                </a>
             </div>
         </div>
         <div class="hero-visual">
             <div class="floating-cards">
                 <div class="card card-1">
-                    <div class="card-icon"><i class="fas fa-chart-line"></i></div>
-                    <span>数据分析</span>
+                    <div class="card-icon"><i class="fas fa-brain"></i></div>
+                    <span>产品思维</span>
                 </div>
                 <div class="card card-2">
                     <div class="card-icon"><i class="fas fa-users"></i></div>
-                    <span>用户研究</span>
+                    <span>用户洞察</span>
                 </div>
                 <div class="card card-3">
-                    <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
-                    <span>产品设计</span>
+                    <div class="card-icon"><i class="fas fa-robot"></i></div>
+                    <span>AI产品</span>
                 </div>
                 <div class="card card-4">
-                    <div class="card-icon"><i class="fas fa-tasks"></i></div>
-                    <span>项目管理</span>
+                    <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                    <span>数据驱动</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 学习路径 -->
-    <section id="learning-path" class="section learning-path">
+    <section id="roadmap" class="section roadmap">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">学习路径</span>
-                <h2>从入门到精通的成长阶梯</h2>
-                <p>无论你是零基础还是有经验的产品经理，都能找到适合自己的学习路径</p>
-            </div>
-            
-            <div class="path-tabs">
-                <button class="path-tab active" data-level="beginner">入门阶段</button>
-                <button class="path-tab" data-level="intermediate">进阶阶段</button>
-                <button class="path-tab" data-level="advanced">高级阶段</button>
+                <span class="section-tag">成长路径</span>
+                <h2>产品经理成长阶梯</h2>
+                <p>从新手到专家的进阶之路，每个阶段都有明确的能力要求和成长目标</p>
             </div>
 
-            <div class="path-content">
-                <div class="path-level active" id="beginner">
-                    <div class="level-header">
-                        <div class="level-icon">
-                            <i class="fas fa-seedling"></i>
+            <div class="roadmap-timeline">
+                <div class="roadmap-item">
+                    <div class="roadmap-phase">阶段一</div>
+                    <div class="roadmap-content">
+                        <h3>产品认知建立</h3>
+                        <p class="roadmap-duration">0-6个月</p>
+                        <div class="roadmap-skills">
+                            <span class="skill-tag">理解产品生命周期</span>
+                            <span class="skill-tag">基础用户研究</span>
+                            <span class="skill-tag">需求文档撰写</span>
+                            <span class="skill-tag">基础原型工具</span>
                         </div>
-                        <div class="level-info">
-                            <h3>入门阶段</h3>
-                            <p>适合零基础或转行产品经理，0-1年经验</p>
-                            <div class="level-meta">
-                                <span><i class="fas fa-clock"></i> 8-12 周</span>
-                                <span><i class="fas fa-layer-group"></i> 20+ 课程</span>
-                            </div>
+                        <div class="roadmap-tasks">
+                            <h4>核心任务：</h4>
+                            <ul>
+                                <li>完成首个产品的全流程参与</li>
+                                <li>独立完成5+个需求文档</li>
+                                <li>进行10+次用户访谈</li>
+                                <li>掌握Axure或Figma基础</li>
+                            </ul>
                         </div>
-                    </div>
-                    <div class="path-timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
-                                <h4>第1-2周：产品思维入门</h4>
-                                <ul>
-                                    <li>什么是产品经理</li>
-                                    <li>产品经理的职责与能力模型</li>
-                                    <li>产品生命周期管理</li>
-                                    <li>产品思维训练</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
-                                <h4>第3-4周：用户研究与需求分析</h4>
-                                <ul>
-                                    <li>用户研究方法论</li>
-                                    <li>用户访谈技巧</li>
-                                    <li>需求收集与管理</li>
-                                    <li>用户画像构建</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
-                                <h4>第5-6周：产品设计与原型</h4>
-                                <ul>
-                                    <li>产品设计原则</li>
-                                    <li>Axure/ Figma 基础</li>
-                                    <li>低保真原型制作</li>
-                                    <li>交互设计基础</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
-                                <h4>第7-8周：文档与沟通</h4>
-                                <ul>
-                                    <li>PRD文档撰写</li>
-                                    <li>BRD/MRD文档</li>
-                                    <li>需求评审技巧</li>
-                                    <li>跨部门沟通协作</li>
-                                </ul>
-                            </div>
+                        <div class="roadmap-metrics">
+                            <span><i class="fas fa-check-circle"></i> 交付物质量达标</span>
+                            <span><i class="fas fa-users"></i> 用户反馈收集能力</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="path-level" id="intermediate">
-                    <div class="level-header">
-                        <div class="level-icon">
-                            <i class="fas fa-tree"></i>
+                <div class="roadmap-item">
+                    <div class="roadmap-phase">阶段二</div>
+                    <div class="roadmap-content">
+                        <h3>执行能力提升</h3>
+                        <p class="roadmap-duration">6-18个月</p>
+                        <div class="roadmap-skills">
+                            <span class="skill-tag">版本规划能力</span>
+                            <span class="skill-tag">跨部门协作</span>
+                            <span class="skill-tag">项目管理</span>
+                            <span class="skill-tag">数据分析</span>
                         </div>
-                        <div class="level-info">
-                            <h3>进阶阶段</h3>
-                            <p>适合1-3年经验的产品经理</p>
-                            <div class="level-meta">
-                                <span><i class="fas fa-clock"></i> 12-20 周</span>
-                                <span><i class="fas fa-layer-group"></i> 40+ 课程</span>
-                            </div>
+                        <div class="roadmap-tasks">
+                            <h4>核心任务：</h4>
+                            <ul>
+                                <li>独立负责1-2个完整功能模块</li>
+                                <li>主导3+次需求评审会议</li>
+                                <li>建立个人数据监控体系</li>
+                                <li>完成A/B测试全流程</li>
+                            </ul>
                         </div>
-                    </div>
-                    <div class="path-timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
-                                <h4>第1-4周：数据分析与增长</h4>
-                                <ul>
-                                    <li>数据分析基础</li>
-                                    <li>SQL数据查询</li>
-                                    <li>A/B测试方法</li>
-                                    <li>增长黑客策略</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
-                                <h4>第5-8周：产品策略与规划</h4>
-                                <ul>
-                                    <li>产品战略制定</li>
-                                    <li>竞品分析框架</li>
-                                    <li>Roadmap规划</li>
-                                    <li>OKR设定与跟踪</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
-                                <h4>第9-12周：用户体验优化</h4>
-                                <ul>
-                                    <li>用户体验设计</li>
-                                    <li>可用性测试</li>
-                                    <li>用户旅程地图</li>
-                                    <li>转化率优化</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
-                                <h4>第13-16周：项目管理与敏捷</h4>
-                                <ul>
-                                    <li>敏捷开发方法论</li>
-                                    <li>Scrum实践</li>
-                                    <li>项目风险管理</li>
-                                    <li>团队协作与领导</li>
-                                </ul>
-                            </div>
+                        <div class="roadmap-metrics">
+                            <span><i class="fas fa-check-circle"></i> 版本按时交付率>90%</span>
+                            <span><i class="fas fa-chart-line"></i> 数据分析报告产出</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="path-level" id="advanced">
-                    <div class="level-header">
-                        <div class="level-icon">
-                            <i class="fas fa-mountain"></i>
+                <div class="roadmap-item">
+                    <div class="roadmap-phase">阶段三</div>
+                    <div class="roadmap-content">
+                        <h3>独立负责产品</h3>
+                        <p class="roadmap-duration">1.5-3年</p>
+                        <div class="roadmap-skills">
+                            <span class="skill-tag">产品策略制定</span>
+                            <span class="skill-tag">Roadmap规划</span>
+                            <span class="skill-tag">竞品分析</span>
+                            <span class="skill-tag">团队管理</span>
                         </div>
-                        <div class="level-info">
-                            <h3>高级阶段</h3>
-                            <p>适合3年以上经验的高级产品经理</p>
-                            <div class="level-meta">
-                                <span><i class="fas fa-clock"></i> 持续学习</span>
-                                <span><i class="fas fa-layer-group"></i> 高级课程</span>
-                            </div>
+                        <div class="roadmap-tasks">
+                            <h4>核心任务：</h4>
+                            <ul>
+                                <li>独立负责完整产品线</li>
+                                <li>制定季度/年度产品规划</li>
+                                <li>带领2-3人小团队</li>
+                                <li>建立产品指标体系</li>
+                            </ul>
+                        </div>
+                        <div class="roadmap-metrics">
+                            <span><i class="fas fa-star"></i> 产品指标显著提升</span>
+                            <span><i class="fas fa-users"></i> 团队协作效率提升</span>
                         </div>
                     </div>
-                    <div class="path-timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
-                                <h4>战略与商业模式</h4>
-                                <ul>
-                                    <li>商业模式设计</li>
-                                    <li>产品组合策略</li>
-                                    <li>市场进入策略</li>
-                                    <li>企业战略规划</li>
-                                </ul>
-                            </div>
+                </div>
+
+                <div class="roadmap-item">
+                    <div class="roadmap-phase">阶段四</div>
+                    <div class="roadmap-content">
+                        <h3>高级产品能力</h3>
+                        <p class="roadmap-duration">3-5年</p>
+                        <div class="roadmap-skills">
+                            <span class="skill-tag">战略规划</span>
+                            <span class="skill-tag">商业分析</span>
+                            <span class="skill-tag">组织影响</span>
+                            <span class="skill-tag">创新突破</span>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
-                                <h4>组织与领导力</h4>
-                                <ul>
-                                    <li>产品团队建设</li>
-                                    <li>产品文化塑造</li>
-                                    <li>组织变革管理</li>
-                                    <li>高管沟通技巧</li>
-                                </ul>
-                            </div>
+                        <div class="roadmap-tasks">
+                            <h4>核心任务：</h4>
+                            <ul>
+                                <li>参与公司级产品战略</li>
+                                <li>推动产品创新项目</li>
+                                <li>建立产品最佳实践</li>
+                                <li>培养初级产品经理</li>
+                            </ul>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
-                                <h4>创新与创业</h4>
-                                <ul>
-                                    <li>精益创业方法</li>
-                                    <li>创新思维训练</li>
-                                    <li>AI产品设计</li>
-                                    <li>产品投资评估</li>
-                                </ul>
-                            </div>
+                        <div class="roadmap-metrics">
+                            <span><i class="fas fa-rocket"></i> 产品创新成果</span>
+                            <span><i class="fas fa-users"></i> 人才培养成果</span>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
-                                <h4>行业深耕</h4>
-                                <ul>
-                                    <li>垂直行业分析</li>
-                                    <li>国际市场拓展</li>
-                                    <li>合规与隐私</li>
-                                    <li>可持续发展</li>
-                                </ul>
-                            </div>
+                    </div>
+                </div>
+
+                <div class="roadmap-item">
+                    <div class="roadmap-phase">阶段五</div>
+                    <div class="roadmap-content">
+                        <h3>产品专家/VP</h3>
+                        <p class="roadmap-duration">5年+</p>
+                        <div class="roadmap-skills">
+                            <span class="skill-tag">战略思维</span>
+                            <span class="skill-tag">组织建设</span>
+                            <span class="skill-tag">商业敏感</span>
+                            <span class="skill-tag">行业影响</span>
+                        </div>
+                        <div class="roadmap-tasks">
+                            <h4>核心任务：</h4>
+                            <ul>
+                                <li>制定公司整体产品战略</li>
+                                <li>搭建产品团队和文化</li>
+                                <li>推动业务模式创新</li>
+                                <li>建立行业影响力</li>
+                            </ul>
+                        </div>
+                        <div class="roadmap-metrics">
+                            <span><i class="fas fa-trophy"></i> 业务成果</span>
+                            <span><i class="fas fa-globe"></i> 行业认可</span>
                         </div>
                     </div>
                 </div>
@@ -317,45 +230,60 @@
         </div>
     </section>
 
-    <!-- 核心技能 -->
     <section id="skills" class="section skills">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">核心技能</span>
-                <h2>产品经理必备能力图谱</h2>
-                <p>系统化掌握产品经理所需的核心技能，成为全能型产品人才</p>
+                <span class="section-tag">核心能力</span>
+                <h2>2026年产品经理必备能力图谱</h2>
+                <p>掌握这些核心能力，成为行业抢手的顶尖产品人才</p>
             </div>
 
             <div class="skills-grid">
                 <div class="skill-card">
                     <div class="skill-icon">
-                        <i class="fas fa-search"></i>
+                        <i class="fas fa-brain"></i>
                     </div>
-                    <h3>用户研究</h3>
-                    <p>掌握用户访谈、问卷调查、行为数据分析等方法，深入理解用户需求</p>
+                    <h3>产品思维</h3>
+                    <p>结构化思考，系统化解决问题，从全局视角看待产品</p>
                     <div class="skill-tags">
-                        <span>用户访谈</span>
-                        <span>问卷设计</span>
-                        <span>数据分析</span>
+                        <span>第一性原理</span>
+                        <span>系统性思维</span>
+                        <span>批判性思考</span>
                     </div>
                     <div class="skill-progress">
-                        <div class="progress-bar" style="--progress: 85%"></div>
+                        <div class="progress-bar" style="--progress: 95%"></div>
+                    </div>
+                    <div class="skill-tips">
+                        <h4>提升建议：</h4>
+                        <ul>
+                            <li>每天思考一个产品问题</li>
+                            <li>用MECE原则分析问题</li>
+                            <li>建立个人思维框架</li>
+                        </ul>
                     </div>
                 </div>
 
                 <div class="skill-card">
                     <div class="skill-icon">
-                        <i class="fas fa-pencil-ruler"></i>
+                        <i class="fas fa-search"></i>
                     </div>
-                    <h3>产品设计</h3>
-                    <p>从概念到原型，完整的产品设计流程与方法论</p>
+                    <h3>用户洞察</h3>
+                    <p>深入理解用户需求，发现真实痛点，创造用户价值</p>
                     <div class="skill-tags">
-                        <span>原型设计</span>
-                        <span>UI/UX</span>
-                        <span>交互设计</span>
+                        <span>用户访谈</span>
+                        <span>行为分析</span>
+                        <span>同理心地图</span>
                     </div>
                     <div class="skill-progress">
-                        <div class="progress-bar" style="--progress: 78%"></div>
+                        <div class="progress-bar" style="--progress: 90%"></div>
+                    </div>
+                    <div class="skill-tips">
+                        <h4>提升建议：</h4>
+                        <ul>
+                            <li>每周至少2次用户沟通</li>
+                            <li>建立用户画像体系</li>
+                            <li>跟踪用户行为数据</li>
+                        </ul>
                     </div>
                 </div>
 
@@ -364,30 +292,46 @@
                         <i class="fas fa-chart-bar"></i>
                     </div>
                     <h3>数据分析</h3>
-                    <p>数据驱动决策，掌握核心指标、漏斗分析、归因模型</p>
+                    <p>数据驱动决策，用数据验证假设，发现增长机会</p>
                     <div class="skill-tags">
                         <span>指标体系</span>
-                        <span>SQL</span>
-                        <span>可视化</span>
+                        <span>SQL查询</span>
+                        <span>归因分析</span>
                     </div>
                     <div class="skill-progress">
-                        <div class="progress-bar" style="--progress: 72%"></div>
+                        <div class="progress-bar" style="--progress: 85%"></div>
+                    </div>
+                    <div class="skill-tips">
+                        <h4>提升建议：</h4>
+                        <ul>
+                            <li>掌握基础SQL语法</li>
+                            <li>学习统计基础知识</li>
+                            <li>熟悉主流分析工具</li>
+                        </ul>
                     </div>
                 </div>
 
                 <div class="skill-card">
                     <div class="skill-icon">
-                        <i class="fas fa-project-diagram"></i>
+                        <i class="fas fa-pencil-ruler"></i>
                     </div>
-                    <h3>项目管理</h3>
-                    <p>敏捷开发实践，有效推进产品从规划到上线</p>
+                    <h3>产品设计</h3>
+                    <p>从概念到原型，打造优秀用户体验，设计创新解决方案</p>
                     <div class="skill-tags">
-                        <span>Scrum</span>
-                        <span>优先级</span>
-                        <span>风险管理</span>
+                        <span>交互设计</span>
+                        <span>信息架构</span>
+                        <span>原型工具</span>
                     </div>
                     <div class="skill-progress">
-                        <div class="progress-bar" style="--progress: 90%"></div>
+                        <div class="progress-bar" style="--progress: 80%"></div>
+                    </div>
+                    <div class="skill-tips">
+                        <h4>提升建议：</h4>
+                        <ul>
+                            <li>持续关注设计趋势</li>
+                            <li>练习手绘和数字原型</li>
+                            <li>学习设计系统知识</li>
+                        </ul>
                     </div>
                 </div>
 
@@ -396,14 +340,70 @@
                         <i class="fas fa-comments"></i>
                     </div>
                     <h3>沟通协作</h3>
-                    <p>跨部门沟通技巧，有效传达产品价值与需求</p>
+                    <p>有效传达产品价值，协调各方资源，推动项目落地</p>
                     <div class="skill-tags">
                         <span>需求评审</span>
-                        <span>演讲技巧</span>
-                        <span>冲突管理</span>
+                        <span>跨部门协作</span>
+                        <span>演讲表达</span>
                     </div>
                     <div class="skill-progress">
                         <div class="progress-bar" style="--progress: 88%"></div>
+                    </div>
+                    <div class="skill-tips">
+                        <h4>提升建议：</h4>
+                        <ul>
+                            <li>学习结构化表达</li>
+                            <li>掌握不同角色语言</li>
+                            <li>建立协作SOP</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>项目管理</h3>
+                    <p>有效规划资源，管理风险，确保项目按时高质量交付</p>
+                    <div class="skill-tags">
+                        <span>敏捷方法</span>
+                        <span>优先级排序</span>
+                        <span>风险管理</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-bar" style="--progress: 82%"></div>
+                    </div>
+                    <div class="skill-tips">
+                        <h4>提升建议：</h4>
+                        <ul>
+                            <li>熟练使用项目管理工具</li>
+                            <li>学习风险识别方法</li>
+                            <li>建立个人效率系统</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-chess-knight"></i>
+                    </div>
+                    <h3>战略思维</h3>
+                    <p>从商业角度思考产品，制定长期发展规划，平衡多方利益</p>
+                    <div class="skill-tags">
+                        <span>商业分析</span>
+                        <span>竞争格局</span>
+                        <span>增长策略</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-bar" style="--progress: 75%"></div>
+                    </div>
+                    <div class="skill-tips">
+                        <h4>提升建议：</h4>
+                        <ul>
+                            <li>学习商业模式画布</li>
+                            <li>定期进行竞品分析</li>
+                            <li>关注行业趋势动态</li>
+                        </ul>
                     </div>
                 </div>
 
@@ -411,283 +411,243 @@
                     <div class="skill-icon">
                         <i class="fas fa-lightbulb"></i>
                     </div>
-                    <h3>产品思维</h3>
-                    <p>结构化思考，培养敏锐的产品洞察力与判断力</p>
+                    <h3>创新能力</h3>
+                    <p>突破思维定式，发现新机会，创造差异化产品价值</p>
                     <div class="skill-tags">
-                        <span>逻辑思维</span>
-                        <span>创新思维</span>
-                        <span>批判思考</span>
+                        <span>创新方法</span>
+                        <span>实验思维</span>
+                        <span>快速迭代</span>
                     </div>
                     <div class="skill-progress">
-                        <div class="progress-bar" style="--progress: 82%"></div>
+                        <div class="progress-bar" style="--progress: 78%"></div>
+                    </div>
+                    <div class="skill-tips">
+                        <h4>提升建议：</h4>
+                        <ul>
+                            <li>使用TRIZ创新方法</li>
+                            <li>建立个人创新实验室</li>
+                            <li>培养跨界思维习惯</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 课程内容 -->
-    <section id="courses" class="section courses">
+    <section id="ai" class="section ai-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">精选课程</span>
-                <h2>系统化课程体系</h2>
-                <p>从基础到进阶，覆盖产品经理全链路能力</p>
+                <span class="section-tag">AI时代</span>
+                <h2>2026 AI产品经理能力要求</h2>
+                <p>掌握AI技术应用，成为下一代AI产品专家</p>
             </div>
 
-            <div class="course-filters">
-                <button class="filter-btn active" data-filter="all">全部</button>
-                <button class="filter-btn" data-filter="beginner">入门</button>
-                <button class="filter-btn" data-filter="intermediate">进阶</button>
-                <button class="filter-btn" data-filter="advanced">高级</button>
-                <button class="filter-btn" data-filter="tool">工具</button>
-            </div>
-
-            <div class="course-grid">
-                <div class="course-card" data-category="beginner">
-                    <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1553484771-371a605b060b?w=400" alt="产品经理基础">
-                        <div class="course-level">入门</div>
+            <div class="ai-grid">
+                <div class="ai-card">
+                    <div class="ai-icon">
+                        <i class="fas fa-microchip"></i>
                     </div>
-                    <div class="course-content">
-                        <div class="course-meta">
-                            <span><i class="fas fa-clock"></i> 12课时</span>
-                            <span><i class="fas fa-users"></i> 2,345人</span>
-                        </div>
-                        <h3>产品经理入门指南：从零开始成为PM</h3>
-                        <p>全面了解产品经理的角色、职责与能力要求，奠定坚实基础</p>
-                        <div class="course-instructor">
-                            <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="讲师">
-                            <span>张雪 产品总监</span>
-                        </div>
-                        <div class="course-footer">
-                            <div class="course-rating">
-                                <i class="fas fa-star"></i>
-                                <span>4.9</span>
-                                <span>(328评价)</span>
-                            </div>
-                            <button class="btn btn-primary btn-sm">开始学习</button>
-                        </div>
+                    <h3>AI技术理解</h3>
+                    <p>理解机器学习、深度学习、自然语言处理、计算机视觉等AI核心技术原理</p>
+                    <div class="ai-topics">
+                        <span>机器学习基础</span>
+                        <span>大语言模型</span>
+                        <span>RAG架构</span>
+                        <span>AI评估方法</span>
                     </div>
                 </div>
 
-                <div class="course-card" data-category="intermediate">
-                    <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400" alt="数据分析">
-                        <div class="course-level">进阶</div>
+                <div class="ai-card">
+                    <div class="ai-icon">
+                        <i class="fas fa-cogs"></i>
                     </div>
-                    <div class="course-content">
-                        <div class="course-meta">
-                            <span><i class="fas fa-clock"></i> 18课时</span>
-                            <span><i class="fas fa-users"></i> 1,892人</span>
-                        </div>
-                        <h3>数据驱动产品决策：实战数据分析</h3>
-                        <p>掌握SQL、Excel、Python数据分析工具，实现数据驱动增长</p>
-                        <div class="course-instructor">
-                            <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="讲师">
-                            <span>李明 数据专家</span>
-                        </div>
-                        <div class="course-footer">
-                            <div class="course-rating">
-                                <i class="fas fa-star"></i>
-                                <span>4.8</span>
-                                <span>(256评价)</span>
-                            </div>
-                            <button class="btn btn-primary btn-sm">开始学习</button>
-                        </div>
+                    <h3>AI产品设计</h3>
+                    <p>设计AI产品体验，处理不确定性，平衡AI能力与用户预期</p>
+                    <div class="ai-topics">
+                        <span>Prompt设计</span>
+                        <span>人机协作</span>
+                        <span>容错机制</span>
+                        <span>可解释性</span>
                     </div>
                 </div>
 
-                <div class="course-card" data-category="beginner">
-                    <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=400" alt="用户研究">
-                        <div class="course-level">入门</div>
+                <div class="ai-card">
+                    <div class="ai-icon">
+                        <i class="fas fa-database"></i>
                     </div>
-                    <div class="course-content">
-                        <div class="course-meta">
-                            <span><i class="fas fa-clock"></i> 10课时</span>
-                            <span><i class="fas fa-users"></i> 1,567人</span>
-                        </div>
-                        <h3>用户研究方法论：深入理解用户需求</h3>
-                        <p>系统学习用户访谈、问卷调查、可用性测试等研究方法</p>
-                        <div class="course-instructor">
-                            <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="讲师">
-                            <span>王芳 用户体验专家</span>
-                        </div>
-                        <div class="course-footer">
-                            <div class="course-rating">
-                                <i class="fas fa-star"></i>
-                                <span>4.9</span>
-                                <span>(189评价)</span>
-                            </div>
-                            <button class="btn btn-primary btn-sm">开始学习</button>
-                        </div>
+                    <h3>数据工程</h3>
+                    <p>理解数据管道，数据质量控制，数据标注与管理</p>
+                    <div class="ai-topics">
+                        <span>数据清洗</span>
+                        <span>特征工程</span>
+                        <span>数据标注</span>
+                        <span>数据合规</span>
                     </div>
                 </div>
 
-                <div class="course-card" data-category="tool">
-                    <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" alt="Axure">
-                        <div class="course-level">工具</div>
+                <div class="ai-card">
+                    <div class="ai-icon">
+                        <i class="fas fa-balance-scale"></i>
                     </div>
-                    <div class="course-content">
-                        <div class="course-meta">
-                            <span><i class="fas fa-clock"></i> 15课时</span>
-                            <span><i class="fas fa-users"></i> 3,210人</span>
-                        </div>
-                        <h3>Axure RP 9 实战：从入门到精通</h3>
-                        <p>快速掌握Axure原型设计工具，制作专业级交互原型</p>
-                        <div class="course-instructor">
-                            <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="讲师">
-                            <span>陈浩 设计专家</span>
-                        </div>
-                        <div class="course-footer">
-                            <div class="course-rating">
-                                <i class="fas fa-star"></i>
-                                <span>4.7</span>
-                                <span>(456评价)</span>
-                            </div>
-                            <button class="btn btn-primary btn-sm">开始学习</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card" data-category="advanced">
-                    <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400" alt="产品策略">
-                        <div class="course-level">高级</div>
-                    </div>
-                    <div class="course-content">
-                        <div class="course-meta">
-                            <span><i class="fas fa-clock"></i> 20课时</span>
-                            <span><i class="fas fa-users"></i> 892人</span>
-                        </div>
-                        <h3>产品战略规划：制定成功的产品策略</h3>
-                        <p>学习产品战略制定、竞争分析、增长策略规划</p>
-                        <div class="course-instructor">
-                            <img src="https://randomuser.me/api/portraits/women/5.jpg" alt="讲师">
-                            <span>刘婷 产品VP</span>
-                        </div>
-                        <div class="course-footer">
-                            <div class="course-rating">
-                                <i class="fas fa-star"></i>
-                                <span>5.0</span>
-                                <span>(128评价)</span>
-                            </div>
-                            <button class="btn btn-primary btn-sm">开始学习</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="course-card" data-category="intermediate">
-                    <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400" alt="敏捷开发">
-                        <div class="course-level">进阶</div>
-                    </div>
-                    <div class="course-content">
-                        <div class="course-meta">
-                            <span><i class="fas fa-clock"></i> 14课时</span>
-                            <span><i class="fas fa-users"></i> 1,234人</span>
-                        </div>
-                        <h3>敏捷产品管理：Scrum实战指南</h3>
-                        <p>掌握敏捷开发方法，有效管理产品迭代与团队协作</p>
-                        <div class="course-instructor">
-                            <img src="https://randomuser.me/api/portraits/men/6.jpg" alt="讲师">
-                            <span>赵强 Scrum Master</span>
-                        </div>
-                        <div class="course-footer">
-                            <div class="course-rating">
-                                <i class="fas fa-star"></i>
-                                <span>4.8</span>
-                                <span>(234评价)</span>
-                            </div>
-                            <button class="btn btn-primary btn-sm">开始学习</button>
-                        </div>
+                    <h3>AI伦理与合规</h3>
+                    <p>理解AI伦理问题，隐私保护，算法公平性，可解释性要求</p>
+                    <div class="ai-topics">
+                        <span>隐私保护</span>
+                        <span>算法公平</span>
+                        <span>透明可解释</span>
+                        <span>合规要求</span>
                     </div>
                 </div>
             </div>
 
-            <div class="view-all">
-                <button class="btn btn-outline btn-lg">
-                    查看全部课程
-                    <i class="fas fa-arrow-right"></i>
-                </button>
+            <div class="ai-workflow">
+                <h3>AI产品开发流程</h3>
+                <div class="workflow-steps">
+                    <div class="workflow-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>问题定义</h4>
+                            <p>识别适合AI解决的问题</p>
+                        </div>
+                    </div>
+                    <div class="workflow-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="workflow-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>数据准备</h4>
+                            <p>收集、清洗、标注数据</p>
+                        </div>
+                    </div>
+                    <div class="workflow-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="workflow-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>模型选择</h4>
+                            <p>选择合适的技术方案</p>
+                        </div>
+                    </div>
+                    <div class="workflow-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="workflow-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>产品集成</h4>
+                            <p>设计用户体验和交互</p>
+                        </div>
+                    </div>
+                    <div class="workflow-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="workflow-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>评估优化</h4>
+                            <p>持续监控和迭代</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 实践项目 -->
-    <section class="section projects">
+    <section id="tools" class="section tools-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">实战项目</span>
-                <h2>真实项目练手，提升实战能力</h2>
-                <p>每个项目都是真实业务场景，学完就能用到工作中</p>
+                <span class="section-tag">工具箱</span>
+                <h2>产品经理常用工具指南</h2>
+                <p>掌握这些工具，提升工作效率，专注产品本身</p>
             </div>
 
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600" alt="电商项目">
-                        <div class="project-overlay">
-                            <button class="btn btn-primary">开始项目</button>
-                        </div>
+            <div class="tools-categories">
+                <div class="tool-category">
+                    <div class="category-header">
+                        <i class="fas fa-pen-fancy"></i>
+                        <h3>原型设计</h3>
                     </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="tag">电商</span>
-                            <span class="tag">B端</span>
+                    <div class="tool-list">
+                        <div class="tool-item">
+                            <h4>Figma</h4>
+                            <p>协作式界面设计工具</p>
+                            <span class="tool-level">必备</span>
                         </div>
-                        <h3>电商后台管理系统设计</h3>
-                        <p>从0到1设计一套完整的电商后台系统，包含订单管理、库存管理、用户管理等功能模块</p>
-                        <div class="project-meta">
-                            <span><i class="fas fa-clock"></i> 2周</span>
-                            <span><i class="fas fa-tasks"></i> 5个模块</span>
-                            <span><i class="fas fa-layer-group"></i> 初级</span>
+                        <div class="tool-item">
+                            <h4>Axure RP</h4>
+                            <p>专业交互原型工具</p>
+                            <span class="tool-level">进阶</span>
                         </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600" alt="社交项目">
-                        <div class="project-overlay">
-                            <button class="btn btn-primary">开始项目</button>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="tag">社交</span>
-                            <span class="tag">C端</span>
-                        </div>
-                        <h3>陌生人社交App产品设计</h3>
-                        <p>设计一款创新的陌生人社交产品，包含匹配算法、即时通讯、兴趣社区等核心功能</p>
-                        <div class="project-meta">
-                            <span><i class="fas fa-clock"></i> 3周</span>
-                            <span><i class="fas fa-tasks"></i> 8个模块</span>
-                            <span><i class="fas fa-layer-group"></i> 中级</span>
+                        <div class="tool-item">
+                            <h4>Sketch</h4>
+                            <p>Mac原生设计工具</p>
+                            <span class="tool-level">推荐</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600" alt="教育项目">
-                        <div class="project-overlay">
-                            <button class="btn btn-primary">开始项目</button>
+                <div class="tool-category">
+                    <div class="category-header">
+                        <i class="fas fa-database"></i>
+                        <h3>数据分析</h3>
+                    </div>
+                    <div class="tool-list">
+                        <div class="tool-item">
+                            <h4>SQL</h4>
+                            <p>数据查询与分析</p>
+                            <span class="tool-level">必备</span>
+                        </div>
+                        <div class="tool-item">
+                            <h4>Python</h4>
+                            <p>数据处理与可视化</p>
+                            <span class="tool-level">进阶</span>
+                        </div>
+                        <div class="tool-item">
+                            <h4>Tableau</h4>
+                            <p>商业智能可视化</p>
+                            <span class="tool-level">推荐</span>
                         </div>
                     </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="tag">教育</span>
-                            <span class="tag">SaaS</span>
+                </div>
+
+                <div class="tool-category">
+                    <div class="category-header">
+                        <i class="fas fa-project-diagram"></i>
+                        <h3>项目管理</h3>
+                    </div>
+                    <div class="tool-list">
+                        <div class="tool-item">
+                            <h4>Jira</h4>
+                            <p>敏捷项目管理</p>
+                            <span class="tool-level">必备</span>
                         </div>
-                        <h3>在线教育平台增长策略设计</h3>
-                        <p>分析现有教育平台数据，制定并执行增长策略，提升用户转化与留存</p>
-                        <div class="project-meta">
-                            <span><i class="fas fa-clock"></i> 4周</span>
-                            <span><i class="fas fa-tasks"></i> 6个模块</span>
-                            <span><i class="fas fa-layer-group"></i> 高级</span>
+                        <div class="tool-item">
+                            <h4>Notion</h4>
+                            <p>知识管理与协作</p>
+                            <span class="tool-level">推荐</span>
+                        </div>
+                        <div class="tool-item">
+                            <h4>飞书/钉钉</h4>
+                            <p>团队协作平台</p>
+                            <span class="tool-level">必备</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tool-category">
+                    <div class="category-header">
+                        <i class="fas fa-users"></i>
+                        <h3>用户研究</h3>
+                    </div>
+                    <div class="tool-list">
+                        <div class="tool-item">
+                            <h4>问卷星/腾讯问卷</h4>
+                            <p>在线问卷调研</p>
+                            <span class="tool-level">必备</span>
+                        </div>
+                        <div class="tool-item">
+                            <h4>神策/ GrowingIO</h4>
+                            <p>用户行为分析</p>
+                            <span class="tool-level">进阶</span>
+                        </div>
+                        <div class="tool-item">
+                            <h4>Miro</h4>
+                            <p>在线白板协作</p>
+                            <span class="tool-level">推荐</span>
                         </div>
                     </div>
                 </div>
@@ -695,20 +655,19 @@
         </div>
     </section>
 
-    <!-- 推荐资源 -->
     <section id="resources" class="section resources">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">学习资源</span>
-                <h2>精选资源推荐</h2>
-                <p>书籍、工具、社区，一站式资源库</p>
+                <h2>精选推荐资源</h2>
+                <p>书籍、博客、社区，持续学习提升自己</p>
             </div>
 
             <div class="resource-tabs">
                 <button class="resource-tab active" data-type="books">📚 书籍推荐</button>
-                <button class="resource-tab" data-type="tools">🛠️ 工具箱</button>
+                <button class="resource-tab" data-type="blogs">📰 博客媒体</button>
                 <button class="resource-tab" data-type="communities">👥 社区</button>
-                <button class="resource-tab" data-type="websites">🌐 网站</button>
+                <button class="resource-tab" data-type="newsletters">📧 Newsletter</button>
             </div>
 
             <div class="resource-content">
@@ -720,107 +679,100 @@
                                 <h4>《启示录：打造用户喜爱的产品》</h4>
                                 <p>Marty Cagan · 产品管理经典之作</p>
                             </div>
-                            <div class="resource-rating">
-                                <i class="fas fa-star"></i>
-                                <span>9.5</span>
+                            <div class="resource-tags">
+                                <span class="tag">必读</span>
+                                <span class="tag">经典</span>
                             </div>
                         </div>
                         <div class="resource-item">
                             <div class="resource-rank">02</div>
                             <div class="resource-info">
                                 <h4>《精益创业》</h4>
-                                <p>Eric Ries · 创业方法论必读</p>
+                                <p>Eric Ries · 创业方法论</p>
                             </div>
-                            <div class="resource-rating">
-                                <i class="fas fa-star"></i>
-                                <span>9.2</span>
+                            <div class="resource-tags">
+                                <span class="tag">必读</span>
+                                <span class="tag">方法论</span>
                             </div>
                         </div>
                         <div class="resource-item">
                             <div class="resource-rank">03</div>
                             <div class="resource-info">
-                                <h4>《用户体验要素》</h4>
-                                <p>Jesse James Garrett · UX经典指南</p>
+                                <h4>《俞军产品方法论》</h4>
+                                <p>俞军 · 中国产品经理必读</p>
                             </div>
-                            <div class="resource-rating">
-                                <i class="fas fa-star"></i>
-                                <span>9.0</span>
+                            <div class="resource-tags">
+                                <span class="tag">必读</span>
+                                <span class="tag">本土</span>
                             </div>
                         </div>
                         <div class="resource-item">
                             <div class="resource-rank">04</div>
                             <div class="resource-info">
-                                <h4>《俞军产品方法论》</h4>
-                                <p>俞军 · 国内产品经理必读</p>
+                                <h4>《原则》</h4>
+                                <p>Ray Dalio · 决策与思维框架</p>
                             </div>
-                            <div class="resource-rating">
-                                <i class="fas fa-star"></i>
-                                <span>8.8</span>
+                            <div class="resource-tags">
+                                <span class="tag">思维</span>
+                                <span class="tag">推荐</span>
                             </div>
                         </div>
                         <div class="resource-item">
                             <div class="resource-rank">05</div>
                             <div class="resource-info">
-                                <h4>《产品经理实战手册》</h4>
-                                <p>莱恩·莱韦斯克 · 实用指南</p>
+                                <h4>《思考，快与慢》</h4>
+                                <p>Daniel Kahneman · 行为经济学</p>
                             </div>
-                            <div class="resource-rating">
-                                <i class="fas fa-star"></i>
-                                <span>8.6</span>
+                            <div class="resource-tags">
+                                <span class="tag">心理学</span>
+                                <span class="tag">推荐</span>
+                            </div>
+                        </div>
+                        <div class="resource-item">
+                            <div class="resource-rank">06</div>
+                            <div class="resource-info">
+                                <h4>《AI产品经理手册》</h4>
+                                <p>2024 · AI产品设计指南</p>
+                            </div>
+                            <div class="resource-tags">
+                                <span class="tag">AI</span>
+                                <span class="tag">新版</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="resource-panel" id="tools">
-                    <div class="tools-grid">
-                        <div class="tool-item">
-                            <div class="tool-icon" style="background: #FF6B6B;">
-                                <i class="fas fa-pen-fancy"></i>
-                            </div>
-                            <h4>Figma</h4>
-                            <p>原型设计工具</p>
-                            <span class="tool-tag">设计</span>
+                <div class="resource-panel" id="blogs">
+                    <div class="blog-grid">
+                        <div class="blog-item">
+                            <div class="blog-icon"><i class="fas fa-globe"></i></div>
+                            <h4>Product Hunt Blog</h4>
+                            <p>全球新产品发现与趋势</p>
                         </div>
-                        <div class="tool-item">
-                            <div class="tool-icon" style="background: #4ECDC4;">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <h4>SQL</h4>
-                            <p>数据查询语言</p>
-                            <span class="tool-tag">数据</span>
+                        <div class="blog-item">
+                            <div class="blog-icon"><i class="fas fa-chart-line"></i></div>
+                            <h4>Sequoia Blog</h4>
+                            <p>顶级VC的产品洞察</p>
                         </div>
-                        <div class="tool-item">
-                            <div class="tool-icon" style="background: #45B7D1;">
-                                <i class="fas fa-chart-pie"></i>
-                            </div>
-                            <h4>Tableau</h4>
-                            <p>数据可视化</p>
-                            <span class="tool-tag">分析</span>
+                        <div class="blog-item">
+                            <div class="blog-icon"><i class="fab fa-medium"></i></div>
+                            <h4>Medium Product</h4>
+                            <p>优质产品文章聚合</p>
                         </div>
-                        <div class="tool-item">
-                            <div class="tool-icon" style="background: #96CEB4;">
-                                <i class="fab fa-python"></i>
-                            </div>
-                            <h4>Python</h4>
-                            <p>数据分析编程</p>
-                            <span class="tool-tag">编程</span>
+                        <div class="blog-item">
+                            <div class="blog-icon"><i class="fas fa-language"></i></div>
+                            <h4>人人都是产品经理</h4>
+                            <p>国内最大产品社区</p>
                         </div>
-                        <div class="tool-item">
-                            <div class="tool-icon" style="background: #FFEAA7;">
-                                <i class="fas fa-project-diagram"></i>
-                            </div>
-                            <h4>Jira</h4>
-                            <p>项目管理工具</p>
-                            <span class="tool-tag">管理</span>
+                        <div class="blog-item">
+                            <div class="blog-icon"><i class="fas fa-bolt"></i></div>
+                            <h4>即刻App</h4>
+                            <p>产品经理聚集地</p>
                         </div>
-                        <div class="tool-item">
-                            <div class="tool-icon" style="background: #DDA0DD;">
-                                <i class="fab fa-notion"></i>
-                            </div>
-                            <h4>Notion</h4>
-                            <p>文档协作工具</p>
-                            <span class="tool-tag">协作</span>
+                        <div class="blog-item">
+                            <div class="blog-icon"><i class="fab fa-weixin"></i></div>
+                            <h4>知识星球</h4>
+                            <p>深度讨论社群</p>
                         </div>
                     </div>
                 </div>
@@ -831,193 +783,218 @@
                             <div class="community-icon">
                                 <i class="fab fa-weixin"></i>
                             </div>
-                            <h4>即刻App</h4>
-                            <p>产品经理聚集地，讨论活跃</p>
-                            <span class="community-members">50万+ 成员</span>
+                            <h4>微信群</h4>
+                            <p>各城市PM交流群</p>
+                            <span class="community-members">高频交流</span>
                         </div>
                         <div class="community-item">
                             <div class="community-icon">
-                                <i class="fab fa-weixin"></i>
+                                <i class="fab fa-slack"></i>
                             </div>
-                            <h4>知识星球</h4>
-                            <p>多个PM付费社群，深入交流</p>
-                            <span class="community-members">10万+ 成员</span>
+                            <h4>Product Love</h4>
+                            <p>国际PM社区</p>
+                            <span class="community-members">全球视野</span>
+                        </div>
+                        <div class="community-item">
+                            <div class="community-icon">
+                                <i class="fab fa-discord"></i>
+                            </div>
+                            <h4>Discord PM Groups</h4>
+                            <p>实时讨论社区</p>
+                            <span class="community-members">活跃氛围</span>
                         </div>
                         <div class="community-item">
                             <div class="community-icon">
                                 <i class="fab fa-github"></i>
                             </div>
                             <h4>GitHub</h4>
-                            <p>开源产品项目，学习优秀实践</p>
-                            <span class="community-members">开发者社区</span>
-                        </div>
-                        <div class="community-item">
-                            <div class="community-icon">
-                                <i class="fab fa-slack"></i>
-                            </div>
-                            <h4>Slack群组</h4>
-                            <p>国际PM社区，全球交流</p>
-                            <span class="community-members">5万+ 成员</span>
+                            <p>开源产品项目</p>
+                            <span class="community-members">学习源码</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="resource-panel" id="websites">
-                    <div class="website-list">
-                        <a href="#" class="website-item">
-                            <div class="website-info">
-                                <h4>人人都是产品经理</h4>
-                                <p>国内最大产品经理社区</p>
+                <div class="resource-panel" id="newsletters">
+                    <div class="newsletter-list">
+                        <div class="newsletter-item">
+                            <div class="newsletter-info">
+                                <h4>Lenny's Newsletter</h4>
+                                <p>全球最受欢迎的产品Newsletter</p>
                             </div>
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                        <a href="#" class="website-item">
-                            <div class="website-info">
-                                <h4>Product Hunt</h4>
-                                <p>发现新产品，了解行业动态</p>
+                            <span class="newsletter-frequency">每周</span>
+                        </div>
+                        <div class="newsletter-item">
+                            <div class="newsletter-info">
+                                <h4>产品沉思录</h4>
+                                <p>国内优质产品分析</p>
                             </div>
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                        <a href="#" class="website-item">
-                            <div class="website-info">
-                                <h4>Medium</h4>
-                                <p>优质产品文章平台</p>
+                            <span class="newsletter-frequency">每周</span>
+                        </div>
+                        <div class="newsletter-item">
+                            <div class="newsletter-info">
+                                <h4>36氪Pro</h4>
+                                <p>科技商业资讯</p>
                             </div>
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                        <a href="#" class="website-item">
-                            <div class="website-info">
-                                <h4>36氪</h4>
-                                <p>科技资讯与创业报道</p>
+                            <span class="newsletter-frequency">每日</span>
+                        </div>
+                        <div class="newsletter-item">
+                            <div class="newsletter-info">
+                                <h4>Productivity Weekly</h4>
+                                <p>效率工具与技巧</p>
                             </div>
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
+                            <span class="newsletter-frequency">每周</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 社区 -->
-    <section id="community" class="section community-section">
+    <section class="section tips-section">
         <div class="container">
-            <div class="community-content">
-                <div class="community-text">
-                    <span class="section-tag">学习社区</span>
-                    <h2>加入产品经理社群</h2>
-                    <p>与10,000+产品经理一起学习成长，分享经验，解决问题</p>
-                    <div class="community-features">
-                        <div class="feature">
-                            <i class="fas fa-comments"></i>
-                            <span>每日话题讨论</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-user-friends"></i>
-                            <span>导师答疑解惑</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-calendar-alt"></i>
-                            <span>线上线下活动</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-briefcase"></i>
-                            <span>内推与求职</span>
-                        </div>
+            <div class="section-header">
+                <span class="section-tag">实战建议</span>
+                <h2>成为优秀产品经理的关键习惯</h2>
+                <p>这些习惯将帮助你持续成长，走在行业前沿</p>
+            </div>
+
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-number">01</div>
+                    <h3>保持好奇心</h3>
+                    <p>每天花30分钟了解新事物，阅读行业资讯，尝试新产品，关注技术趋势</p>
+                    <div class="tip-actions">
+                        <span><i class="fas fa-check"></i> 订阅产品资讯</span>
+                        <span><i class="fas fa-check"></i> 每周体验新App</span>
                     </div>
-                    <button class="btn btn-primary btn-lg">
-                        <i class="fab fa-weixin"></i>
-                        扫码加入社群
-                    </button>
                 </div>
-                <div class="community-image">
-                    <div class="floating-avatars">
-                        <img src="https://randomuser.me/api/portraits/women/11.jpg" alt="PM" class="avatar avatar-1">
-                        <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="PM" class="avatar avatar-2">
-                        <img src="https://randomuser.me/api/portraits/women/13.jpg" alt="PM" class="avatar avatar-3">
-                        <img src="https://randomuser.me/api/portraits/men/14.jpg" alt="PM" class="avatar avatar-4">
-                        <img src="https://randomuser.me/api/portraits/women/15.jpg" alt="PM" class="avatar avatar-5">
+
+                <div class="tip-card">
+                    <div class="tip-number">02</div>
+                    <h3>数据驱动决策</h3>
+                    <p>用数据验证假设，用指标跟踪效果，培养数据敏感度和分析能力</p>
+                    <div class="tip-actions">
+                        <span><i class="fas fa-check"></i> 建立个人数据看板</span>
+                        <span><i class="fas fa-check"></i> 学习SQL基础</span>
                     </div>
-                    <div class="community-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">10,000+</span>
-                            <span class="stat-label">活跃成员</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">500+</span>
-                            <span class="stat-label">每日讨论</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">100+</span>
-                            <span class="stat-label">行业专家</span>
-                        </div>
+                </div>
+
+                <div class="tip-card">
+                    <div class="tip-number">03</div>
+                    <h3>深度用户接触</h3>
+                    <p>每周与用户深度交流，理解真实场景和需求，避免闭门造车</p>
+                    <div class="tip-actions">
+                        <span><i class="fas fa-check"></i> 建立用户沟通机制</span>
+                        <span><i class="fas fa-check"></i> 定期用户回访</span>
+                    </div>
+                </div>
+
+                <div class="tip-card">
+                    <div class="tip-number">04</div>
+                    <h3>建立反馈循环</h3>
+                    <p>快速验证，快速迭代，及时收集反馈，持续优化产品</p>
+                    <div class="tip-actions">
+                        <span><i class="fas fa-check"></i> 实践MVP方法</span>
+                        <span><i class="fas fa-check"></i> 建立反馈渠道</span>
+                    </div>
+                </div>
+
+                <div class="tip-card">
+                    <div class="tip-number">05</div>
+                    <h3>跨领域学习</h3>
+                    <p>了解技术、设计、运营、商业，培养T型人才能力</p>
+                    <div class="tip-actions">
+                        <span><i class="fas fa-check"></i> 学习基础编程</span>
+                        <span><i class="fas fa-check"></i> 了解设计原则</span>
+                    </div>
+                </div>
+
+                <div class="tip-card">
+                    <div class="tip-number">06</div>
+                    <h3>输出倒逼输入</h3>
+                    <p>写博客、做分享、复盘总结，通过输出加深理解</p>
+                    <div class="tip-actions">
+                        <span><i class="fas fa-check"></i> 开设个人博客</span>
+                        <span><i class="fas fa-check"></i> 参与行业分享</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
     <section class="section cta">
         <div class="container">
             <div class="cta-content">
-                <h2>开启你的产品经理之路</h2>
-                <p>现在注册，即可获得免费课程包和专属学习规划</p>
-                <div class="cta-form">
-                    <input type="email" placeholder="输入你的邮箱地址" class="cta-input">
-                    <button class="btn btn-primary btn-lg">免费开始学习</button>
+                <h2>开启你的产品经理成长之路</h2>
+                <p>掌握正确的方法论，持续学习和实践，你一定能成为优秀的产品经理</p>
+                <div class="cta-checklist">
+                    <div class="check-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>系统化学习产品方法论</span>
+                    </div>
+                    <div class="check-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>建立个人知识体系</span>
+                    </div>
+                    <div class="check-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>加入产品社区交流</span>
+                    </div>
                 </div>
-                <p class="cta-note">已有账号？<a href="#">立即登录</a></p>
+                <a href="#resources" class="btn btn-primary btn-lg">
+                    <i class="fas fa-rocket"></i>
+                    获取资源，开始行动
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- 页脚 -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="logo">
                         <i class="fas fa-rocket"></i>
-                        <span>PM Hub</span>
+                        <span>产品经理成长</span>
                     </div>
                     <p>致力于帮助更多人成为优秀的产品经理</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-weixin"></i></a>
                         <a href="#"><i class="fab fa-weibo"></i></a>
                         <a href="#"><i class="fab fa-zhihu"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
                 <div class="footer-links">
-                    <h4>学习资源</h4>
+                    <h4>成长路径</h4>
                     <ul>
-                        <li><a href="#">课程中心</a></li>
-                        <li><a href="#">实战项目</a></li>
-                        <li><a href="#">资源下载</a></li>
-                        <li><a href="#">学习指南</a></li>
+                        <li><a href="#roadmap">阶段指南</a></li>
+                        <li><a href="#skills">核心能力</a></li>
+                        <li><a href="#ai">AI时代</a></li>
+                        <li><a href="#tools">工具箱</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
-                    <h4>关于我们</h4>
+                    <h4>资源</h4>
                     <ul>
-                        <li><a href="#">公司简介</a></li>
-                        <li><a href="#">加入我们</a></li>
-                        <li><a href="#">联系我们</a></li>
-                        <li><a href="#">媒体报道</a></li>
+                        <li><a href="#resources">书籍推荐</a></li>
+                        <li><a href="#resources">博客媒体</a></li>
+                        <li><a href="#resources">社区</a></li>
+                        <li><a href="#resources">Newsletter</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
-                    <h4>帮助中心</h4>
+                    <h4>关于</h4>
                     <ul>
-                        <li><a href="#">常见问题</a></li>
-                        <li><a href="#">使用指南</a></li>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">联系方式</a></li>
                         <li><a href="#">意见反馈</a></li>
-                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">友链交换</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 PM Hub. All rights reserved.</p>
+                <p>&copy; 2026 产品经理成长指南 · 用爱制作</p>
             </div>
         </div>
     </footer>
